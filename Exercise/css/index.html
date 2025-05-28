@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal - Styled</title>
+
+    <style>
+        body {
+            background-color: #f0f8ff; /* Fallback for Task 4, also serving as initial body background [cite: 4] */
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="mainHeader">
+        <h1 style="color: red;">Welcome to our Community Event Portal!</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="help.html" target="_blank">Help Document</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>About Us</h2>
+            <p>This portal helps residents register for events, check locations, and access basic services[cite: 24].</p>
+            <p class="description">We aim to foster a stronger community by providing easy access to local happenings. Our goal is to make participation in community events as straightforward as possible, ensuring everyone can find something they enjoy.</p>
+        </section>
+
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <div class="event-grid">
+                <div class="eventCard">
+                    <h3>Summer Festival</h3>
+                    <p class="description">Join us for a day of music, food, and fun for all ages. [cite: 14]</p>
+                    <button class="cta-button">Register Now</button>
+                </div>
+                <div class="eventCard">
+                    <h3>Community Workshop</h3>
+                    <p class="description">Learn new skills at our interactive workshop sessions. [cite: 14]</p>
+                    <button class="cta-button">Register Now</button>
+                </div>
+                <div class="eventCard">
+                    <h3>Local Art Show</h3>
+                    <p class="description">Explore local talent and beautiful artwork from our community. [cite: 14]</p>
+                    <button class="cta-button">Register Now</button>
+                </div>
+            </div>
+
+            <h3>Event Registration Form</h3>
+            <form>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                </div>
+                <div>
+                    <label for="eventDate">Date:</label>
+                    <input type="date" id="eventDate" name="eventDate" required>
+                </div>
+                 <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Any special requests?"></textarea>
+                </div>
+                <button type="submit" class="cta-button">Submit</button>
+            </form>
+        </section>
+
+        <section id="community-bulletin">
+            <h2>Community Bulletin</h2>
+            <div class="news-article">
+                <p>The city council has announced new initiatives to support local businesses and promote sustainable living. These programs aim to create a more vibrant and eco-friendly community for all residents. Details about grant applications and volunteer opportunities will be released next month.</p>
+                <p>A new public park is set to open next spring, featuring walking trails, a children's playground, and dedicated spaces for community gatherings. The design phase is complete, and construction is scheduled to begin in late summer. Public feedback sessions were instrumental in shaping the park's final design, reflecting the diverse needs and desires of the community.</p>
+                <p>Volunteers are needed for the annual spring clean-up event. Various tasks are available, from litter collection to planting new trees in public spaces. This event is crucial for maintaining the beauty and cleanliness of our city. Interested individuals can sign up through the portal, and all participants will receive a commemorative t-shirt.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+             <h2>Contact Us</h2>
+            <p>Get in touch with us for any inquiries.</p>
+            <ul>
+                <li><a href="#">Email Us</a></li>
+                <li><a href="#">Call Us</a></li>
+                <li><a href="#">Visit Our Office</a></li>
+            </ul>
+        </section>
+
+        <section id="admin-table">
+            <h2>Event Administration Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Event ID</th>
+                        <th>Event Name</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Summer Festival</td>
+                        <td>2024-07-15</td>
+                        <td>Central Park</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Community Workshop</td>
+                        <td>2024-08-01</td>
+                        <td>Community Hall</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Local Art Show</td>
+                        <td>2024-08-20</td>
+                        <td>Art Gallery</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>Charity Run</td>
+                        <td>2024-09-10</td>
+                        <td>Riverside Trail</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>005</td>
+                        <td>Book Fair</td>
+                        <td>2024-09-25</td>
+                        <td>Library</td>
+                        <td>Active</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Local Community Event Portal</p>
+    </footer>
+</body>
+</html>

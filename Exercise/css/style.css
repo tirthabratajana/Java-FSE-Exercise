@@ -1,0 +1,352 @@
+/* Task 1: Add comments to label each section [cite: 6] */
+
+/* Universal Selector for resetting margin/padding [cite: 11] */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+/* Body and HTML styles [cite: 4] */
+body {
+    font-family: 'Roboto', sans-serif; /* Task 5: Google Font [cite: 14] */
+    background-image: url('https://via.placeholder.com/1920x1080/ADD8E6/FFFFFF?text=Cityscape'); /* Task 4: Background image with fallback color via body background-color */
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgba(173, 216, 230, 0.7); /* Task 4: RGBA fallback background color [cite: 13] */
+    color: #333;
+    line-height: 1.6; /* Task 5: Line height [cite: 14] */
+}
+
+/* Header styles [cite: 6] */
+#mainHeader { /* Task 3: ID selector [cite: 11] */
+    background-color: #0056b3; /* Task 4: HEX color [cite: 13] */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#mainHeader h1 {
+    font-size: 2.5em; /* Task 5: Font size [cite: 14] */
+    margin-bottom: 10px;
+}
+
+/* Navigation styles [cite: 6] */
+nav {
+    background-color: #007BFF;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none; /* Task 6: Remove bullets from nav menus [cite: 15] */
+    padding: 0;
+    display: flex; /* Bonus: Flexbox for responsive layouts */
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px; /* Task 6: Add padding and margin to list items for spacing [cite: 15] */
+    padding: 5px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700; /* Task 5: Font weight [cite: 14] */
+    font-size: 1.1em;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:link { /* Task 6: Style links with pseudo-classes [cite: 15] */
+    color: white;
+}
+
+nav ul li a:visited { /* Task 6: Style links with pseudo-classes [cite: 15] */
+    color: #e0e0e0;
+}
+
+nav ul li a:hover { /* Task 6: Style links with pseudo-classes [cite: 15] */
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+nav ul li a:active { /* Task 6: Style links with pseudo-classes [cite: 15] */
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Main content layout [cite: 6] */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Element selector for all h2 [cite: 11] and gradient for headers [cite: 13] */
+h2 {
+    background: linear-gradient(to right, #007BFF, #6610f2); /* Task 4: Gradients [cite: 13] */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em; /* Task 5: Font size [cite: 14] */
+}
+
+/* Grouping selector for h3, p [cite: 12] */
+h3, p {
+    margin-bottom: 15px;
+    font-style: normal; /* Task 5: Font style [cite: 14] */
+    font-weight: 400; /* Task 5: Font weight [cite: 14] */
+}
+
+p.description {
+    text-align: justify; /* Task 5: Text alignment [cite: 14] */
+    text-transform: none; /* Task 5: Text transform [cite: 14] */
+    letter-spacing: 0.5px; /* Task 5: Letter spacing [cite: 14] */
+    line-height: 1.8; /* Task 5: Line height [cite: 14] */
+    font-size: 0.95em;
+}
+
+/* Event Card styles [cite: 6] */
+.event-grid {
+    display: grid; /* Bonus: Grid for responsive layouts */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.eventCard { /* Task 3: Class selector [cite: 12] */
+    background-color: #f8f9fa;
+    border: 1px solid #ddd; /* Task 8: Add border [cite: 19] */
+    border-radius: 8px;
+    padding: 20px; /* Task 8: Add padding [cite: 19] */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* Task 8: Add margin [cite: 19] */
+    text-align: center;
+}
+
+.eventCard h3 {
+    color: #007BFF;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.eventCard p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Call to Action Button styles [cite: 9] */
+.cta-button {
+    background-color: #007BFF; /* [cite: 9] */
+    color: white; /* [cite: 9] */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Form Styling */
+form {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form textarea {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none; /* Task 8: Add outline to highlight selected fields in a form */
+    transition: border-color 0.3s ease, outline 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #007BFF;
+    outline: 2px solid #007BFF; /* Task 8: Add outline [cite: 19] */
+}
+
+/* List Styling for Contact Section [cite: 6] */
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact ul li {
+    margin-bottom: 10px; /* Task 6: Add padding and margin to list items for spacing [cite: 15] */
+}
+
+#contact ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1.1em;
+}
+
+#contact ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Table Styling [cite: 6] */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Task 7: Use border-collapse: collapse [cite: 17] */
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd; /* Task 7: Style table, th, and td with borders [cite: 16] */
+    padding: 12px; /* Task 7: Add padding [cite: 16] */
+    text-align: center; /* Task 7: Use text-align: center [cite: 17] */
+}
+
+th {
+    background-color: #007BFF; /* Task 7: Add background color [cite: 16] */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Task 7: Add zebra striping to rows using nth-child(even) [cite: 17] */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* Task 9: Multiple Columns in Text [cite: 20] */
+.news-article {
+    column-count: 2; /* [cite: 20] */
+    column-gap: 30px; /* [cite: 20] */
+    column-rule: 1px solid gray; /* [cite: 20] */
+    padding: 20px;
+    background-color: #fefefe;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
+
+/* Footer styles [cite: 6] */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Task 8: Compare visibility: hidden vs. display: none */
+/* .hidden-visibility {
+    visibility: hidden; /* Element takes up space but is not visible */
+/* } */
+
+/* .hidden-display {
+    display: none; /* Element is completely removed from the document flow and does not take up space */
+/* } */
+
+
+/* Task 10: Responsive Web Design with Media Queries [cite: 21] */
+@media screen and (max-width: 768px) { /* [cite: 22] */
+    /* Stack navigation links vertically [cite: 22] */
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Reduce image sizes (for .eventCard if it contained images directly) */
+    /* Example: if .eventCard had images, you'd target them like this: */
+    /* .eventCard img {
+        width: 100%;
+        height: auto;
+    } */
+
+    /* Reduce font sizes [cite: 22] */
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .eventCard h3 {
+        font-size: 1.2em;
+    }
+
+    .cta-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    main {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .news-article {
+        column-count: 1; /* Single column on smaller screens */
+    }
+
+    /* Use vw/vh for flexible layouts [cite: 22] */
+    /* For instance, setting font-size based on viewport width */
+    body {
+        font-size: 3vw; /* Adjusts font size relative to viewport width */
+    }
+    nav ul li a {
+        font-size: 4vw; /* Adjusts nav link font size relative to viewport width */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 4vw;
+    }
+    nav ul li a {
+        font-size: 5vw;
+    }
+    .eventCard {
+        margin: 5px;
+        padding: 15px;
+    }
+}
