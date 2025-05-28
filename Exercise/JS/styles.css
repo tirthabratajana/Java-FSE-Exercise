@@ -1,0 +1,233 @@
+
+/* General Body and HTML styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Filter and Search Controls */
+#filter-controls {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+#categoryFilter, #eventSearch {
+    flex: 1; /* Allow items to grow and shrink */
+    min-width: 200px; /* Minimum width before wrapping */
+}
+
+#categoryFilter label, #eventSearch label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+#eventCategory, #searchEvent {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Event Card Container */
+.event-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Individual Event Card */
+.event-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: calc(33.33% - 20px); /* Approx 3 cards per row, accounting for gap */
+    box-sizing: border-box;
+    opacity: 1; /* Initial state for fadeOut/fadeIn */
+    transition: opacity 0.5s ease; /* Smooth transition for fade effects */
+}
+
+/* Hide events that are past or full */
+.event-card.hidden {
+    display: none; /* Completely removes the element from the document flow */
+}
+
+.event-card h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.event-card p {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.event-card button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.event-card button:hover:not(:disabled) {
+    background-color: #218838;
+}
+
+.event-card button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Registration Form */
+#registrationForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+#registrationForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#registrationForm input,
+#registrationForm select {
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#registrationForm button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#registrationForm button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Loading Spinner */
+#loadingSpinner {
+    display: none; /* Hidden by default */
+    margin-top: 20px;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+}
+
+/* Message Area for success/error */
+#messageArea {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#messageArea.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#messageArea.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Input validation feedback */
+input.invalid {
+    border-color: red !important; /* Override default border */
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -10px; /* Adjust spacing to be closer to the input */
+    margin-bottom: 10px;
+    display: block; /* Ensure it takes its own line */
+}
+
+/* Styles for Task 14 jQuery fadeIn/fadeOut (already in main.js inline style, but good to have here for completeness) */
+/* .event-card.fade-out {
+    opacity: 0;
+}
+.event-card.fade-in {
+    opacity: 1;
+} */
+
+/* Toggle Cards Button for jQuery demo */
+#toggleCardsBtn {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#toggleCardsBtn:hover {
+    background-color: #e0a800;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .event-card {
+        width: calc(50% - 15px); /* 2 cards per row on medium screens */
+    }
+    #filter-controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-card {
+        width: 100%; /* 1 card per row on small screens */
+    }
+    body {
+        margin: 10px;
+    }
+    #registrationForm, #filter-controls {
+        padding: 15px;
+    }
+}

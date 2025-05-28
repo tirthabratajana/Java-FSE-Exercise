@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal - JS</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <h1>Local Community Events</h1>
+
+    <div id="filter-controls">
+        <div id="categoryFilter">
+            <label for="eventCategory">Filter by Category:</label>
+            <select id="eventCategory">
+                <option value="all">All Categories</option>
+                <option value="music">Music</option>
+                <option value="workshop">Workshop</option>
+                <option value="sport">Sport</option>
+                <option value="community">Community</option>
+            </select>
+        </div>
+        <div id="eventSearch">
+            <label for="searchEvent">Search Event Name:</label>
+            <input type="text" id="searchEvent" placeholder="Type to search...">
+        </div>
+    </div>
+
+    <div class="event-card-container" id="eventsContainer">
+        </div>
+
+    <h2>Event Registration</h2>
+    <form id="registrationForm">
+        <label for="regEventName">Event Name:</label>
+        <input type="text" id="regEventName" name="eventName" placeholder="e.g., Summer Music Fest">
+        <span id="eventNameError" class="error-message"></span>
+
+        <label for="regEmail">Email:</label>
+        <input type="email" id="regEmail" name="email" placeholder="your.email@example.com">
+        <span id="emailError" class="error-message"></span>
+
+        <label for="regSeats">Number of Seats:</label>
+        <input type="number" id="regSeats" name="seats" min="1" value="1">
+        <span id="seatsError" class="error-message"></span>
+
+        <button type="submit" id="registerBtn">Register for Event</button>
+        <div id="loadingSpinner">Registering...</div>
+        <div id="messageArea"></div>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
